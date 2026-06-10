@@ -1,0 +1,81 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "a091bf48-d955-4325-ab96-58d38e2ae5a5",
+  "prevIds": [
+    "4fc0c385-6fd5-480f-b43f-6038db531e55",
+    "7dbc0d7e-09d0-4336-8e7e-f4dde8cc421f",
+    "c396bb64-10c8-4fbb-b704-5b8fb079b89c"
+  ],
+  "ddl": [
+    {
+      "values": [
+        "active",
+        "inactive",
+        "archived",
+        "banned",
+        "suspended",
+        "deleted"
+      ],
+      "name": "user_status",
+      "entityType": "enums",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "users",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "users"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "name",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "users"
+    },
+    {
+      "type": "user_status",
+      "typeSchema": "public",
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "status",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "users"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "users_pkey",
+      "schema": "public",
+      "table": "users",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}
