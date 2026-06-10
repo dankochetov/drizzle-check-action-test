@@ -1,17 +1,14 @@
 {
   "version": "8",
   "dialect": "postgres",
-  "id": "a091bf48-d955-4325-ab96-58d38e2ae5a5",
+  "id": "6d4dd934-a053-417e-a126-ddee7f92e8ea",
   "prevIds": [
-    "4fc0c385-6fd5-480f-b43f-6038db531e55",
-    "7dbc0d7e-09d0-4336-8e7e-f4dde8cc421f",
-    "c396bb64-10c8-4fbb-b704-5b8fb079b89c"
+    "76335379-a06a-4567-951e-eb7a11ae0bdc"
   ],
   "ddl": [
     {
       "values": [
         "active",
-        "inactive",
         "archived",
         "banned",
         "suspended",
