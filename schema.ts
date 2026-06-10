@@ -1,9 +1,14 @@
-import { pgEnum, pgTable, serial, text } from 'drizzle-orm/pg-core';
+import { index, pgEnum, pgTable, serial, text, varchar } from 'drizzle-orm/pg-core';
 
-export const userStatus = pgEnum('user_status', ['active', 'archived', 'suspended', 'deleted', 'on_hold', 'trialing']);
+export const userStatus = pgEnum('user_status', ['active', 'archived', 'suspended', 'deleted', 'on_hold', 'trialing', 'frozen']);
 
 export const users = pgTable('users', {
 	id: serial('id').primaryKey(),
-	name: text('name'),
+	name: varchar('name', { length: 255 }),
 	status: userStatus('status'),
+}, (t) => [index('users_status_idx').on(t.status)]);
+
+export const posts = pgTable('posts', {
+	id: serial('id').primaryKey(),
+	body: text('body'),
 });
