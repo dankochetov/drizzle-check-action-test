@@ -1,6 +1,6 @@
 import { pgEnum, pgTable, serial, text } from 'drizzle-orm/pg-core';
 
-export const userStatus = pgEnum('user_status', ['active', 'archived', 'suspended', 'deleted']);
+export const userStatus = pgEnum('user_status', ['active', 'archived', 'suspended', 'deleted', 'restored']);
 
 export const users = pgTable('users', {
 	id: serial('id').primaryKey(),
