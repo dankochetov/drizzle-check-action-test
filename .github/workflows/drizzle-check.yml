@@ -18,5 +18,3 @@ jobs:
       - run: npm install
 
       - uses: drizzle-team/drizzle-orm/actions/check@commutativity-check-action
-        with:
-          config: drizzle.config.ts
