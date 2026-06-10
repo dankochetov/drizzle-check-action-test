@@ -1,0 +1,8 @@
+{
+	"name": "drizzle-check-action-test",
+	"private": true,
+	"dependencies": {
+		"drizzle-kit": "file:./drizzle-kit-1.0.0-rc.4.tgz",
+		"drizzle-orm": "1.0.0-rc.4-5d5b77c"
+	}
+}
