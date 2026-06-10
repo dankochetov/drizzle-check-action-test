@@ -4,7 +4,7 @@ export const userStatus = pgEnum('user_status', ['active', 'archived', 'suspende
 
 export const users = pgTable('users', {
 	id: serial('id').primaryKey(),
-	name: varchar('name', { length: 255 }),
+	name: varchar('name', { length: 255 }).default('anon'),
 	status: userStatus('status'),
 }, (t) => [index('users_status_idx').on(t.status)]);
 
